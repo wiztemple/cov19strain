@@ -1,13 +1,122 @@
+html,
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  background-color: #fff;
+  font-size: 16px;
+  min-width: 300px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-rendering: auto;
+  text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+html::-webkit-scrollbar-track {
+  background: #f1f1f1;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Handle */
+html::-webkit-scrollbar-thumb {
+  background: #356dfb;
+}
+html::-webkit-scrollbar {
+  width: 4px;
+}
+/* Handle on hover */
+html::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+}
+
+a {
+  color: #3273dc;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #363636;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+p,
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.small {
+  margin-top: 0rem;
+}
+
+.h1 {
+  font-size: 4rem;
+  line-height: 5rem;
+}
+
+.h2 {
+  font-size: 3rem;
+  line-height: 4rem;
+}
+.h3 {
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+.h4 {
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+}
+
+.h5 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.h6 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.h7 {
+  font-size: 0.8rem;
+  line-height: 1.3rem;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.6;
+  overflow-y: hidden;
+}
+
+.text-center {
+  text-align: center;
 }
