@@ -53,7 +53,9 @@ const Navbar = () => {
             </a>
           </div>
           <div className="navbar-right">
-            <div className="navbar-item">Last Updated at {formatDate()}</div>
+            <div className="navbar-item">
+              Last Updated at <span className="date-span">{formatDate()}</span>
+            </div>
           </div>
         </div>
       </div>

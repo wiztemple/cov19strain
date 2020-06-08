@@ -5,6 +5,8 @@ import httpServices from "../services/httpServices";
 
 const SelectCountry = () => {
   const [countries, setCountries] = useState([]);
+  const [countryData, setCountryData] = useState([]);
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     fetchCountries();
   }, []);
@@ -18,9 +20,20 @@ const SelectCountry = () => {
         console.log(e);
       });
   };
-
+  const fetchCountryData = (target) => {
+    httpServices
+      .getSingleCountryStats(target)
+      .then((response) => setCountryData(response.data))
+      .catch((e) => console.log(e));
+  };
+  const optionSelected = (e) => {
+    const selected = e.target.value;
+    const countryStats = fetchCountryData(selected);
+    console.log("hat", countryStats);
+    console.log("countryData", countryData);
+  };
   return (
-    <select class="select-field">
+    <select className="select-field" onChange={optionSelected}>
       <option value="all">All</option>
       {countries.map((country) => {
         return (

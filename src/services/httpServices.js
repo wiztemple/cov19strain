@@ -6,7 +6,11 @@ const getAllCountries = () => {
 const getStatsDataSummary = () => {
   return http.get("/summary");
 };
+const getSingleCountryStats = (countryname) => {
+  return http.get(`/country/${countryname}`);
+};
 export default {
   getAllCountries,
   getStatsDataSummary,
+  getSingleCountryStats,
 };

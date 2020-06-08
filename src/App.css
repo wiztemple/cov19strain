@@ -240,7 +240,12 @@
     margin-left: -0.75rem;
   }
 }
-
+.date-span {
+  margin-left: 5px;
+  color: rgb(161, 8, 98);
+  font-size: 18px;
+  font-weight: 600;
+}
 .section {
   padding: 40px 0;
   border-bottom: 1px solid #eeeeee;
@@ -502,7 +507,7 @@
 }
 .stats-pill.deaths {
   background: rgba(170, 42, 42, 0.03);
-  color: #aa2a2a;
+  color: #df0707;
   border: 1px solid rgba(170, 42, 42, 0.04);
   box-sizing: border-box;
   border-radius: 5px;

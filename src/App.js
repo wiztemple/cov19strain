@@ -25,9 +25,39 @@ const App = () => {
             <div className="col-3">
               <div className="country-select-wrapper">
                 <SelectCountry />
+                <div className="space-between">
+                  <div className="selected-country-details-card">
+                    <h1>Total Cases</h1>
+                    <span className="warning">3636636</span>
+                  </div>
+                  <div className="selected-country-details-card">
+                    <h1>Total Deaths</h1>
+                    <span className="danger">3636636</span>
+                  </div>
+                </div>
+                <div className="space-between">
+                  <div className="selected-country-details-card">
+                    <h1>Recoveries</h1>
+                    <span className="success">3636636</span>
+                  </div>
+                  <div className="selected-country-details-card">
+                    <h1>Active Cases</h1>
+                    <span className="blue">3636636</span>
+                  </div>
+                </div>
+                <div className="space-between">
+                  <div className="selected-country-details-card">
+                    <h1>New Cases</h1>
+                    <span className="orange">3636636</span>
+                  </div>
+                  <div className="selected-country-details-card">
+                    <h1>New Deaths</h1>
+                    <span className="deepred">3636636</span>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-6">
+            <div className="col-6">
               <DynamicCountryMap />
             </div>
           </div>

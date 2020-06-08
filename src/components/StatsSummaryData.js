@@ -28,9 +28,13 @@ const StatsSummaryData = () => {
     <div>
       {/* <code>{JSON.stringify(statsSummary)}</code> */}
       <StatsSummary statsSummary={statsSummary} />
+      <h3>Cases Per Country</h3>
       {countriesData &&
         countriesData.map((countryData) => (
-          <AllCountriesSummary countryData={countryData} />
+          <AllCountriesSummary
+            key={countryData.Country}
+            countryData={countryData}
+          />
         ))}
     </div>
   );

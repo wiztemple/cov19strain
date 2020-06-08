@@ -5,7 +5,7 @@ import MapPlaceholder from "../images/mapplaceholder.png";
 
 const DynamicCountryMap = () => {
   return (
-    <div class="country-map-wrapper">
+    <div className="country-map-wrapper">
       <h3>USA</h3>
       <img src={MapPlaceholder} alt="map placeholder" />
     </div>

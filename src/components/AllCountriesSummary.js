@@ -2,14 +2,17 @@ import React from "react";
 
 const AllCountriesSummary = ({ countryData }) => {
   return (
-    <div class="top-countries-wrapper">
-      <div class="top-country-wrapper">
-        <div class="flex-start align-center">
+    <div className="top-countries-wrapper">
+      <div className="top-country-wrapper">
+        <div className="flex-start align-center">
           <span className="flagless"></span>
-          <span class="top-country-wrapper-name">{countryData.Country}</span>
+          <span className="top-country-wrapper-name">
+            {countryData.Country}
+          </span>
         </div>
-        <span class="top-country-wrapper-count">
-          {countryData.TotalConfirmed}
+        <span className="top-country-wrapper-count">
+          {countryData.TotalConfirmed &&
+            countryData.TotalConfirmed.toLocaleString()}
         </span>
       </div>
     </div>
