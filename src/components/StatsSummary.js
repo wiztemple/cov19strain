@@ -1,6 +1,6 @@
 import React from "react";
 
-const StatsSummary = ({ statsSummary }) => {
+const StatsSummary = ({ statsSummary: {NewConfirmed, TotalConfirmed, TotalDeaths, NewRecovered, NewDeaths, TotalRecovered} } )=> {
   return (
     <div>
       <div className="stats-pill default">
@@ -8,12 +8,12 @@ const StatsSummary = ({ statsSummary }) => {
         <div className="space-between">
           <div className="latest-cases">
             +
-            {statsSummary.NewConfirmed &&
-              statsSummary.NewConfirmed.toLocaleString()}
+            {NewConfirmed &&
+              NewConfirmed.toLocaleString()}
           </div>
           <span className="right-wrapper-cases-number">
-            {statsSummary.TotalConfirmed &&
-              statsSummary.TotalConfirmed.toLocaleString()}
+            {TotalConfirmed &&
+              TotalConfirmed.toLocaleString()}
           </span>
         </div>
       </div>
@@ -22,28 +22,33 @@ const StatsSummary = ({ statsSummary }) => {
         <div className="space-between">
           <div className="latest-cases">
             +
-            {statsSummary.NewConfirmed &&
-              statsSummary.NewConfirmed.toLocaleString()}
+            {NewConfirmed &&
+              NewConfirmed.toLocaleString()}
           </div>
           <span className="right-wrapper-cases-number">
             {Number(
-              statsSummary.TotalConfirmed -
-                (statsSummary.TotalDeaths + statsSummary.TotalRecovered),
+              TotalConfirmed -
+                (TotalDeaths + TotalRecovered),
             )}
           </span>
         </div>
       </div>
       <div className="stats-pill recoveries">
-        <span className="right-wrapper-cases-title">Recoveries</span>
+        <span className="right-wrapper-cases-title">
+          Recoveries{" "}
+          {/* <span role="img" aria-label="img">
+            😁
+          </span> */}
+        </span>
         <div className="space-between">
           <div className="latest-cases">
             +
-            {statsSummary.NewRecovered &&
-              statsSummary.NewRecovered.toLocaleString()}
+            {NewRecovered &&
+              NewRecovered.toLocaleString()}
           </div>
           <span className="right-wrapper-cases-number">
-            {statsSummary.TotalRecovered &&
-              statsSummary.TotalRecovered.toLocaleString()}
+            {TotalRecovered &&
+              TotalRecovered.toLocaleString()}
           </span>
         </div>
       </div>
@@ -51,16 +56,19 @@ const StatsSummary = ({ statsSummary }) => {
         <span className="right-wrapper-cases-title">Total Deaths</span>
         <div className="space-between">
           <div className="latest-cases">
-            +{statsSummary.NewDeaths && statsSummary.NewDeaths.toLocaleString()}
+            +{NewDeaths && NewDeaths.toLocaleString()}
           </div>
           <span className="right-wrapper-cases-number">
-            {statsSummary.TotalDeaths &&
-              statsSummary.TotalDeaths.toLocaleString()}
+            {TotalDeaths &&
+              TotalDeaths.toLocaleString()}
           </span>
         </div>
       </div>
     </div>
   );
 };
+StatsSummary.defaultProps = {
+  NewDeaths: 0,
+}
 
 export default StatsSummary;
