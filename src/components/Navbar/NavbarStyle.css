@@ -2,6 +2,7 @@
 .nav {
   width: 100%;
   display: flex;
+  position: relative;
   justify-content: space-between;
   min-height: 80px;
   align-items: center;
@@ -9,7 +10,21 @@
   background: #ffffff;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
 }
-
+.unknown-circle {
+  position: absolute;
+  left: 0;
+  bottom: -38px;
+}
+.crystal {
+  position: absolute;
+  right: 0;
+  bottom: -42px;
+}
+.nav-blue-cirlce {
+  position: absolute;
+  right: -235px;
+  bottom: -370px;
+}
 .nav-brand {
   height: 80px;
   display: flex;
@@ -73,11 +88,15 @@
 
 .nav-link:hover {
   color: #2b6ff3;
+  background-color: #2b6ef30a;
+  border-radius: 10px;
   transition: all ease-in-out 300ms;
 }
 .nav-link.active {
   color: #2b6ff3;
-  font-weight: 600;
+  font-weight: normal;
+  background-color: #2b6ef30a;
+  border-radius: 10px;
 }
 .nav-menu-hamburger {
   width: 1rem;
@@ -112,7 +131,7 @@
   .nav-link,
   .nav-item,
   .nav-brand {
-    height: 80px;
+    height: 50px;
     display: flex;
     align-items: center;
   }

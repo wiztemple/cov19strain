@@ -18,10 +18,10 @@ const CountryData = () => {
       <h2>Top Affected Countries</h2>
       <p className="updated-last">Last Updated: May 22, 2020</p>
       <div className="columns">
-        <div className="md-col-4 md-pl-0">
+        <div className="full-width md-col-4 md-pl-0">
           <Countries />
         </div>
-        <div className="md-col-4">
+        <div className="full-width md-col-4">
           <CountryStats />
         </div>
         <div className="md-col-4">

@@ -38,6 +38,9 @@
   display: block;
 }
 /* utilities */
+.magic-mt {
+  margin-top: 70px;
+}
 .mb-10 {
   margin-bottom: 10px;
 }
@@ -50,6 +53,7 @@
 .ml-20 {
   margin-left: 20px;
 }
+
 /* colors */
 .blue {
   color: #2b6ff3;
@@ -240,6 +244,9 @@
   .md-col-12 {
     width: 100%;
   }
+  .magic-mt  {
+    margin-top: 0;
+  }
   .md-col-1,
   .md-col-2,
   .md-col-3,
@@ -263,6 +270,9 @@
   /*utilities*/
   .md-mt-20 {
     margin-top: 20px;
+  }
+  .md-mt-120 {
+    margin-top: 120px;
   }
   .md-py-40 {
     padding-top: 40px;

@@ -3,9 +3,25 @@
   height: 310px;
   position: relative;
   padding: 0 0 20px 0;
+  margin-bottom: 20px;
   border: 1px solid #f1f4fa;
   border-radius: 10px;
   overflow-y: scroll;
+}
+.countries::-webkit-scrollbar-thumb {
+  background: #356dfb;
+}
+.countries::-webkit-scrollbar {
+  width: 2px;
+}
+/* Handle on hover */
+.countries::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+@media (min-width: 768px) {
+  .countries {
+    margin-bottom: 0;
+  }
 }
 .countries > span {
   width: 100%;

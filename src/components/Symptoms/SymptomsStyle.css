@@ -3,14 +3,26 @@
   height: 100%;
   padding-top: 80px;
 }
+.main-info {
+  padding: 0 20px;
+}
 .symptoms-pill {
   width: 200px;
   padding: 10px 20px;
   margin-bottom: 30px;
+  margin-left: 20px;
   color: #e81454;
   background-color: rgba(232, 20, 84, 0.123);
   font-size: 14px;
   border-radius: 999px;
+}
+@media (min-width: 768px) {
+  .symptoms-pill {
+    margin-left: 0;
+  }
+  .main-info {
+    padding: 0 0;
+  }
 }
 .symptoms-paragraph {
   margin-top: 10px;
@@ -33,4 +45,12 @@
 .doctor-svg {
   display: flex;
   justify-content: center;
+}
+.doctor-svg > img {
+  width: 30%;
+}
+@media (min-width: 768px) {
+  .doctor-svg > img {
+    width: 35%;
+  }
 }

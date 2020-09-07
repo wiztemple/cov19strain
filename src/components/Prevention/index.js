@@ -15,11 +15,13 @@ const Prevention = () => {
   return (
     <div className="prevention">
       <div className="columns">
-        <div className="md-col-6">
-          <img src={useravatar} alt="prevention" />
+        <div className="full-width md-col-6">
+          <div className="user-avatar">
+            <img src={useravatar} alt="prevention" />
+          </div>
         </div>
-        <div className="md-col-6">
-          <div>
+        <div className="full-width md-col-6">
+          <div className="prevention-info">
             <h1>How can I protect myself from Covid-19?</h1>
             <p className="prevention-desc">
               Coronavirus disease spreads primarily through contact with an
@@ -46,7 +48,7 @@ const Prevention = () => {
                 </div>
               </div>
               <div className="justify-center">
-                <div className="flex-start">
+                <div className="flex-start full-width">
                   <div className="measures-card">
                     <img src={safedistance} alt="safe distance" />
                     <p>Keep safe distance</p>
