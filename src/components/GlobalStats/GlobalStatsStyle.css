@@ -1,0 +1,71 @@
+.globalstats {
+  background-color: #fff;
+  padding: 50px 20px;
+  border-radius: 5px;
+}
+.cases {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.cases-circle {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+.total-cases {
+  background: rgba(43, 111, 243, 0.05);
+}
+.total-cases-circle {
+  background: rgba(43, 111, 243, 0.05);
+}
+.total-cases-circle > .centralized-circle-content > .case-count {
+  color: #2b6ff3;
+}
+.centralized-circle-content > h1 {
+  font-size: 18px;
+  text-align: center;
+}
+.case-count {
+  font-size: 32px;
+  text-align: center;
+  font-weight: 600;
+}
+.latest-count {
+  font-size: 12px;
+  text-align: center;
+  color: #777777;
+}
+.active-cases {
+  background: rgba(243, 153, 17, 0.05);
+}
+.active-cases-circle {
+  background: rgba(243, 153, 17, 0.05);
+}
+.active-cases-circle > .centralized-circle-content > .case-count {
+  color: #f39911;
+}
+.recovered-cases {
+  background: rgba(22, 180, 66, 0.05);
+}
+.recovered-cases-circle {
+  background: rgba(22, 180, 66, 0.05);
+}
+.recovered-cases-circle > .centralized-circle-content > .case-count {
+  color: #16b442;
+}
+.total-deaths {
+  background: rgba(170, 42, 42, 0.05);
+}
+.total-deaths-circle {
+  background: rgba(170, 42, 42, 0.05);
+}
+.total-deaths-circle > .centralized-circle-content > .case-count {
+  color: #d63232;
+}

@@ -1,0 +1,22 @@
+.country-data {
+  position: relative;
+  margin-top: 30px;
+  padding: 20px 40px;
+  background-color: #fff;
+}
+.updated-last {
+  margin: 10px 0 30px 0;
+  font-size: 13px;
+  color: #777;
+}
+.transparent-circle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 20;
+}
+.svg-map > img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}

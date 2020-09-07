@@ -1,14 +1,32 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import GlobalStats from "./components/GlobalStats";
+import CountryData from "./components/CountryData";
+import Symptoms from "./components/Symptoms";
+import Prevention from "./components/Prevention";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        hhjhhhh
-      </header>
+    <div className="app">
+      <Navbar />
+      <div className="container-fluid">
+        <h1 className="md-py-40">COVID-19 Tracker</h1>
+        <GlobalStats />
+        <CountryData />
+      </div>
+      <section id="symptoms">
+        <div className="container-fluid">
+          <Symptoms />
+        </div>
+      </section>
+      <section id="symptoms">
+        <div className="container-fluid">
+          <Prevention />
+        </div>
+      </section>
     </div>
   );
-}
+};
 
 export default App;
