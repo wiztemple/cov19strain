@@ -1,0 +1,28 @@
+.country-data {
+  position: relative;
+  margin-top: 30px;
+  padding: 20px 20px;
+  background-color: #fff;
+}
+@media (min-width: 768px) {
+  .country-data {
+    padding: 20px 40px;
+  }
+}
+.updated-last {
+  margin: 10px 0 30px 0;
+  font-size: 13px;
+  color: #777;
+}
+.transparent-circle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 20;
+}
+.svg-map  {
+  width: 100%;
+}
+.svg-map > h2 {
+  padding: 50px 0;
+}
