@@ -3,7 +3,7 @@ import React from "react";
 // styles
 import "./GlobalStatsStyle.css";
 
-const GlobalStats = () => {
+const GlobalStats = ({ totalCases, activeCases, recovered, deaths, todayRecovered, todayCases, todayDeaths }) => {
   return (
     <div className="globalstats">
       <div className="columns">
@@ -12,8 +12,8 @@ const GlobalStats = () => {
             <div className="cases-circle total-cases-circle">
               <div className="centralized-circle-content">
                 <h1>Total Cases</h1>
-                <span className="case-count">260,00000</span>
-                <p className="latest-count">+2355</p>
+                <span className="case-count">{totalCases}</span>
+                <p className="latest-count">{todayCases}</p>
               </div>
             </div>
           </div>
@@ -23,8 +23,8 @@ const GlobalStats = () => {
             <div className="cases-circle active-cases-circle">
               <div className="centralized-circle-content">
                 <h1>Active Cases</h1>
-                <span className="case-count">260,00000</span>
-                <p className="latest-count">+2355</p>
+                <span className="case-count">{activeCases}</span>
+                <p className="latest-count">{todayCases}</p>
               </div>
             </div>
           </div>
@@ -34,8 +34,8 @@ const GlobalStats = () => {
             <div className="cases-circle recovered-cases-circle">
               <div className="centralized-circle-content">
                 <h1>Recovered</h1>
-                <span className="case-count">160,00000</span>
-                <p className="latest-count">+2355</p>
+                <span className="case-count">{recovered}</span>
+                <p className="latest-count">{todayRecovered}</p>
               </div>
             </div>
           </div>
@@ -45,8 +45,8 @@ const GlobalStats = () => {
             <div className="cases-circle total-deaths-circle">
               <div className="centralized-circle-content">
                 <h1>Total Deaths</h1>
-                <span className="case-count">260,00000</span>
-                <p className="latest-count">+2355</p>
+                <span className="case-count">{deaths}</span>
+                <p className="latest-count">{todayDeaths}</p>
               </div>
             </div>
           </div>

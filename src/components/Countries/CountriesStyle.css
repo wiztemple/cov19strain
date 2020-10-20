@@ -45,7 +45,7 @@
   vertical-align: middle;
   user-select: none;
   border: 1px solid transparent;
-  padding: 0.8rem 1.25rem;
+  padding: 0.4rem 1.25rem;
   font-size: 1rem;
   line-height: 1.5;
   cursor: pointer;
@@ -86,12 +86,12 @@
   opacity: 0.3;
   transition: 0s;
 }
-.country-flag {
+.country-flag  > img {
   width: 30px;
-  height: 25px;
-  background-color: #eee;
+  height: 24px;
+  object-fit: cover;
+  margin-top: 6px;
   border-radius: 5px;
-  border: 1px solid rgba(221, 221, 221, 0.377);
 }
 .country-name {
   margin-left: 10px;
