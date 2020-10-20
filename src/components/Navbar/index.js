@@ -18,7 +18,7 @@ const Navbar = () => {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <circle cx="15" cy="15" r="13.5" stroke="#2B6FF3" stroke-width="3" />
+          <circle cx="15" cy="15" r="13.5" stroke="#2B6FF3" strokeWidth="3" />
         </svg>
       </div>
       <div className="crystal">
@@ -32,7 +32,7 @@ const Navbar = () => {
           <path
             d="M10.6357 19.7299C9.19386 16.1612 12.156 12.3699 15.9675 12.9056L41.6954 16.5214C45.507 17.0571 47.3093 21.518 44.9396 24.551L28.9443 45.0241C26.5746 48.0572 21.8101 47.3876 20.3683 43.8189L10.6357 19.7299Z"
             fill="#2B6FF3"
-            fill-opacity="0.21"
+            fillOpacity="0.21"
           />
         </svg>
       </div>

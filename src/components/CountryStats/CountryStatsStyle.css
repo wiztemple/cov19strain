@@ -1,3 +1,20 @@
+.country-stats_header {
+  display: flex;
+  justify-content: flex-start;
+}
+.country-stats_header > span {
+  display: block;
+  font-size: 18px;
+  padding-bottom: 10px;
+  font-weight: 600;
+}
+.country-stats_header > img {
+  width: 30px;
+  height: 25px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-left: 10px;
+}
 .country-cases,
 .country-active-cases {
   width: 100%;

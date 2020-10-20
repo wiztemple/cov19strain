@@ -37,6 +37,10 @@
 .block-span {
   display: block;
 }
+.app-header {
+  font-size: 24px;
+  text-align: center;
+}
 /* utilities */
 .magic-mt {
   margin-top: 70px;
@@ -280,6 +284,10 @@
   }
   .md-pl-0 {
     padding-left: 0;
+  }
+  .app-header {
+    font-size: 36px;
+    text-align: left;
   }
 }
 @media (min-width: 1024px) {
