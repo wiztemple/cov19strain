@@ -1,38 +1,53 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
-
-// components
 import Navbar from "./components/Navbar";
-import DynamicCountryMap from "./components/DynamicCountryMap";
-import StatsSummaryData from "./components/StatsSummaryData";
-import SelectCountry from "./components/SelectCountry";
+import GlobalStats from "./components/GlobalStats";
+import CountryData from "./components/CountryData";
+import Symptoms from "./components/Symptoms";
+import Prevention from "./components/Prevention";
+import Footer from "./components/Footer";
 
 const App = () => {
-  const [selectedCountry, setSelectedCountry] = useState("");
+  const [globalData, setGlobalData] = useState({});
+
+  useEffect(() => {
+    fetch("https://disease.sh/v3/covid-19/all")
+      .then(response => response.json())
+      .then(data => {
+        setGlobalData(data)
+      })
+
+  }, [])
   return (
-    <div className="App">
-      <div className="header">
-        <Navbar />
-      </div>
-      <section>
+    <div className="app">
+      <Navbar />
+      <section id="globestats">
         <div className="container-fluid">
-          <div className="columns">
-            <div className="col-3">
-              <div className="right-wrapper">
-                <h1>COVID-19 Tracker</h1>
-                <StatsSummaryData />
-              </div>
-            </div>
-            <div className="col-3">
-              <div className="country-select-wrapper">
-                <SelectCountry setSelectedCountry={setSelectedCountry} />
-              </div>
-            </div>
-            <div className="col-6">
-              <DynamicCountryMap selectedCountry={selectedCountry} />
-            </div>
-          </div>
+          <h1 className="md-py-40 app-header">COVID-19 Tracker</h1>
+          <GlobalStats
+            totalCases={globalData.cases}
+            activeCases={globalData.active}
+            recovered={globalData.recovered}
+            deaths={globalData.deaths}
+            todayCases={globalData.todayCases}
+            todayRecovered={globalData.todayRecovered}
+            todayDeaths={globalData.todayDeaths}
+          />
+          <CountryData />
         </div>
+      </section>
+      <section id="symptoms">
+        <div className="container-fluid">
+          <Symptoms />
+        </div>
+      </section>
+      <section id="prevention">
+        <div className="container-fluid">
+          <Prevention />
+        </div>
+      </section>
+      <section>
+        <Footer />
       </section>
     </div>
   );

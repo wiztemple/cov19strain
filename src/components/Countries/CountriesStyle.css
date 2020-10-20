@@ -1,0 +1,104 @@
+.countries {
+  width: 100%;
+  height: 330px;
+  position: relative;
+  padding: 0 0 20px 0;
+  margin-bottom: 20px;
+  border: 1px solid #f1f4fa;
+  border-radius: 10px;
+  overflow-y: scroll;
+}
+.countries::-webkit-scrollbar-thumb {
+  background: #356dfb;
+}
+.countries::-webkit-scrollbar {
+  width: 1px;
+}
+/* Handle on hover */
+.countries::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+@media (min-width: 768px) {
+  .countries {
+    margin-bottom: 0;
+  }
+}
+.countries > span {
+  width: 100%;
+  display: block;
+  position: sticky;
+  top: 0;
+  padding: 20px;
+  background-color: #fff;
+  color: #5f6368;
+  font-weight: 500;
+  z-index: 10;
+}
+.button {
+  display: inline-block;
+  font: inherit;
+  position: relative;
+  color: #222;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.4rem 1.25rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  cursor: pointer;
+}
+.wide-btn > button {
+  width: 100%;
+}
+.button:hover {
+  background: rgba(238, 238, 238, 0.34);
+}
+.button.active {
+  background: rgba(238, 238, 238, 0.34);
+}
+.button:focus {
+  outline: none;
+}
+.ripple {
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+.ripple::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #ddd 10%, transparent 10.01%);
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform 0.5s, opacity 1s;
+}
+.ripple:active::after {
+  transform: scale(0, 0);
+  opacity: 0.3;
+  transition: 0s;
+}
+.country-flag  > img {
+  width: 30px;
+  height: 24px;
+  object-fit: cover;
+  margin-top: 6px;
+  border-radius: 5px;
+}
+.country-name {
+  margin-left: 10px;
+  font-weight: 500;
+}
+
+.country-total-cases {
+  color: #2b6ff3;
+  font-weight: 500;
+}
