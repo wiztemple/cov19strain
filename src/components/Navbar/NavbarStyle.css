@@ -157,3 +157,7 @@
   background: rgba(196, 196, 196, 0.12);
   border-radius: 3px;
 }
+.update-pill > span {
+  color: #e41b36;
+  font-weight: 600;
+}

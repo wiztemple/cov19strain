@@ -43,7 +43,7 @@ const Navbar = () => {
         <div className="nav-mobile">
           <div className="nav-brand">
             <img src={AppLogo} alt="App Logo" />
-            <a href="#">Cov19Strain</a>
+            <a href="/">Cov19Strain</a>
           </div>
           <div>
             <button className="nav-menu-button">
@@ -72,7 +72,7 @@ const Navbar = () => {
           </div>
           <div className="nav-right">
             <div className="nav-item">
-              <div className="update-pill">Last Updated: September 3, 2020</div>
+              <div className="update-pill">Last Updated: <span>{new Date().toLocaleDateString()}</span></div>
             </div>
           </div>
         </div>

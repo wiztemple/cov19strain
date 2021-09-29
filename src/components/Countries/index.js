@@ -4,8 +4,6 @@ import React from "react";
 import "./CountriesStyle.css";
 
 const Countries = ({ countries, clickCountry }) => {
-
-
   return (
     <div className="countries">
       <span>Countries</span>
