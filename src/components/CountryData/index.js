@@ -7,7 +7,6 @@ import Countries from "../Countries";
 // image
 import circle from "../../images/circle.svg";
 import CountryStats from "../CountryStats";
-import LineGraph from "../LineGraph";
 
 const CountryData = () => {
   const [countries, setCountries] = useState([]);
@@ -38,7 +37,7 @@ const CountryData = () => {
     }
     getCountriesData();
     getNigeriaData();
-  }, []);
+  }, [country]);
 
   const onCountryClick = async (e) => {
     const countryCode = e.iso2Value;
@@ -65,10 +64,7 @@ const CountryData = () => {
           <CountryStats countryInfo={countryInfo} />
         </div>
         <div className="md-col-4">
-          <div className="svg-map">
-            <h2>Last 120 Days</h2>
-            <LineGraph />
-          </div>
+          &nbsp;
         </div>
       </div>
     </div>

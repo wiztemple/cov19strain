@@ -44,11 +44,12 @@
 }
 .measures-card > p {
   margin-top: 15px;
-  text-align: center;
   font-size: 14px;
 }
 .measures-card > img {
+  width: 100px;
   border-radius: 50%;
+  object-fit: cover;
 }
 .space-between > .measures-card:nth-child(2),
 .space-between > .measures-card:nth-child(3) {
